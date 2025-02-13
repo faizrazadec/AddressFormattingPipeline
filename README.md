@@ -112,3 +112,70 @@ Optimizes company names by:
 ## **Final Output**  
 The processed address fields are **formatted, optimized, and compliant** with system constraints.  
 They are then stored in a CSV file for further use. 🚀
+
+---
+
+## **🚀 Features**  
+
+- **Automated Address Formatting** – Restructures and formats address fields while adhering to character limits.  
+- **Multi-stage Processing** – Includes pre-processing, LLM-based processing, and post-processing.  
+- **PascalCase Conversion** – Ensures standardized formatting for readability.  
+- **Smart Word Reallocation** – Moves words between `address_1` and `address_2` to optimize space usage.  
+- **Company Name Abbreviation** – Truncates long company names while preserving essential details.  
+- **Duplicate & Redundancy Removal** – Eliminates unnecessary repetitions for cleaner output.  
+- **Phone Number & Special Character Removal** – Ensures addresses only contain relevant information.  
+- **CSV-Based Input & Output** – Easily integrates into existing workflows.  
+
+---
+
+## **🏗️ Project Structure**  
+
+```plaintext
+address_formatter_pipeline/
+├── src/
+│   ├── pre_formating            # Pre-processing module (deduplication, reallocation, PascalCase conversion)
+│   ├── llm_formating            # LLM processing module (parsing addresses, JSON response handling)
+│   ├── post_formating           # Post-processing module (final refinements, compliance with constraints)
+├── data/
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+└── .env.template                # Environment variables
+```
+
+---
+
+## **🔧 Installation & Setup**  
+
+### **Prerequisites**  
+- **Python 3.8+**  
+- **Pandas** for handling CSV files  
+- **OpenAI API Key** (if using LLM processing)  
+
+### **Setup Instructions**  
+
+1. **Clone the repository**  
+   ```sh
+   git clone https://github.com/faizrazadec/AddressFormattingPipeline.git
+   cd AddressFormattingPipeline
+   ```
+
+2. **Create a virtual environment**  
+   ```sh
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   ```
+
+3. **Install dependencies**  
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+4. **Set up environment variables**  
+   ```sh
+   cp .env.template .env
+   ```
+
+5. **Configure Environment Variables**  
+   ```env
+   OPENAI_API_KEY=''
+   ```
