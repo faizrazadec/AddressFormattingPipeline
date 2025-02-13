@@ -33,7 +33,7 @@ This pipeline processes address data in multiple stages, ensuring proper formatt
 ---
 
 ## **Demo**
-![Alt text](/home/faizraza/Projects/format_address/data/demo.png)
+![Demo](data/demo.png)
 
 ## **1. Pre-Processing Modules**  
 
