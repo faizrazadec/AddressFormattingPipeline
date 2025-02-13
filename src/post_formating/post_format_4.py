@@ -10,7 +10,6 @@ This script:
 import re
 import pandas as pd
 
-
 # Sample DataFrame
 data = {
     "Company": ["ABC Corp", "XYZ Inc", "LMN Ltd", "DEF Corp"],
@@ -41,6 +40,7 @@ print(df)
 # Lowercase all column names
 df.columns = df.columns.str.lower()
 
+
 # Function to convert to PascalCase
 def to_pascal_case(s):
     """
@@ -53,6 +53,7 @@ def to_pascal_case(s):
         str: The formatted PascalCase string.
     """
     return "".join(word.capitalize() for word in s.split())
+
 
 # Iterate over each row in the DataFrame
 for index, row in df.iterrows():

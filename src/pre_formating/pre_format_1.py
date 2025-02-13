@@ -11,9 +11,6 @@ df = pd.read_csv("data/Updated ReCharge List - Sheet1 1.csv")
 print("Original DataFrame:")
 print(df)
 
-# For demonstration purposes, limit the DataFrame to a subset of rows
-# df = df[450:460]
-
 # Lowercase all column names
 df.columns = df.columns.str.lower()
 
@@ -31,6 +28,7 @@ columns_to_lower = [
 df[columns_to_lower] = df[columns_to_lower].apply(
     lambda col: col.astype(str).str.lower()
 )
+
 
 def remove_duplicates(row):
     """
@@ -90,6 +88,7 @@ def remove_duplicates(row):
 
     return pd.Series([cleaned_address_1, address_2])
 
+
 # Apply the function to the DataFrame
 df[["address_1", "address_2"]] = df.apply(remove_duplicates, axis=1)
 
@@ -119,6 +118,7 @@ for index, data_row in df.iterrows():
         df.at[index, "address_1"] = new_address_1.strip()
         df.at[index, "address_2"] = new_address_2.strip()
 
+
 # Function to convert to PascalCase
 def to_pascal_case(s):
     """
@@ -131,6 +131,7 @@ def to_pascal_case(s):
         str: The formatted PascalCase string.
     """
     return " ".join(word.capitalize() for word in s.split())
+
 
 # Convert cleaned entries back to PascalCase, excluding the 'phone' column
 columns_to_convert = [

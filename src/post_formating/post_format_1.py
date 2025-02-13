@@ -11,6 +11,7 @@ This script refines address formatting:
 import re
 import pandas as pd
 
+
 def clean_address(address, limit):
     """Remove spaces around commas, periods, dashes, underscores
     and truncate the address to the given limit."""

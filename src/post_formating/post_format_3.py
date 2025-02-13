@@ -6,7 +6,6 @@ This script:
 2. Ensures length limits of 35 characters for
 `formatted_address_1` and 10 for `formatted_address_2`.
 3. Strips unnecessary spaces and maintains formatting consistency.
-
 """
 
 import pandas as pd

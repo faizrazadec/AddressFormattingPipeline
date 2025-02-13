@@ -49,7 +49,7 @@ df[columns_to_convert] = df[columns_to_convert].astype(str)
 def remove_all_spaces_if_long(address_1):
     """
     Removes all spaces from the address if its length exceeds ADDRESS_1_LIMIT.
-    
+
     :param address: The original address string.
     :return: Modified address string with spaces removed if it exceeds ADDRESS_1_LIMIT.
     """

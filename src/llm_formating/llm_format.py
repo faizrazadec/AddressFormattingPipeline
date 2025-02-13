@@ -31,10 +31,12 @@ df = pd.read_csv("data/pre_formated.csv")
 ADDRESS_1_LIMIT = 35
 ADDRESS_2_LIMIT = 10
 
+
 def clean_llm_response(response_text):
     """Remove JSON formatting markers from the LLM response."""
     cleaned_text = re.sub(r"```json|```", "", response_text).strip()
     return cleaned_text
+
 
 # Loop through addresses
 for idx, row in df.iterrows():

@@ -56,7 +56,7 @@ df[columns_to_convert] = df[columns_to_convert].astype(str)
 def remove_special_characters(company):
     """
     Removes special characters from the company name.
-    
+
     :param company: The original company name.
     :return: The cleaned company name.
     """
@@ -76,7 +76,7 @@ def adjust_company_name(company):
     3. If the name contains multiple words:
        - Tries to create an abbreviation based on word count.
        - Ensures the final name does not exceed 10 characters.
-    
+
     :param company: The original company name.
     :return: The adjusted company name.
     """
