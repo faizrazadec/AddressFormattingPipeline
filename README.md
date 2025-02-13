@@ -1,5 +1,10 @@
 # **Address Formatting Pipeline**  
 
+## **Demo**
+![Demo](data/demo.png)
+
+ ---
+
 ## **Problem Statement**  
 
 Many e-commerce, logistics, and database systems impose **strict character limits** on address fields, requiring:  
@@ -31,9 +36,6 @@ This project aims to **clean, optimize, and restructure address fields** using a
 This pipeline processes address data in multiple stages, ensuring proper formatting, removing redundancies, and optimizing length constraints.  
 
 ---
-
-## **Demo**
-![Demo](data/demo.png)
 
 ## **1. Pre-Processing Modules**  
 
