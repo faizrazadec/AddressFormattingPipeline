@@ -147,7 +147,7 @@ address_formatter_pipeline/
 ## **🔧 Installation & Setup**  
 
 ### **Prerequisites**  
-- **Python 3.8+**  
+- **Python 3.12+**  
 - **Pandas** for handling CSV files  
 - **OpenAI API Key** (if using LLM processing)  
 
@@ -161,13 +161,12 @@ address_formatter_pipeline/
 
 2. **Create a virtual environment**  
    ```sh
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   uv venv
    ```
 
 3. **Install dependencies**  
    ```sh
-   pip install -r requirements.txt
+   uv pip install -r pyproject.toml
    ```
 
 4. **Set up environment variables**  
